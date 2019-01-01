@@ -14,6 +14,7 @@
 		0182F10C21D83E670038E08D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0182F10A21D83E670038E08D /* LaunchScreen.storyboard */; };
 		0182F11721D83E670038E08D /* BeatStepTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0182F11621D83E670038E08D /* BeatStepTests.swift */; };
 		0182F12221D83E670038E08D /* BeatStepUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0182F12121D83E670038E08D /* BeatStepUITests.swift */; };
+		0191B89E21DC0C1100D55C89 /* PlayPauseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0191B89D21DC0C1100D55C89 /* PlayPauseButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		0182F11D21D83E670038E08D /* BeatStepUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeatStepUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0182F12121D83E670038E08D /* BeatStepUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeatStepUITests.swift; sourceTree = "<group>"; };
 		0182F12321D83E670038E08D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0191B89D21DC0C1100D55C89 /* PlayPauseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayPauseButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		0182F10021D83E640038E08D /* BeatStep */ = {
 			isa = PBXGroup;
 			children = (
+				0191B89C21DC0BDB00D55C89 /* Controls */,
 				0182F10121D83E640038E08D /* AppDelegate.swift */,
 				0182F10321D83E640038E08D /* ViewController.swift */,
 				0182F10521D83E640038E08D /* Main.storyboard */,
@@ -123,6 +126,14 @@
 				0182F12321D83E670038E08D /* Info.plist */,
 			);
 			path = BeatStepUITests;
+			sourceTree = "<group>";
+		};
+		0191B89C21DC0BDB00D55C89 /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				0191B89D21DC0C1100D55C89 /* PlayPauseButton.swift */,
+			);
+			path = Controls;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,6 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0182F10421D83E640038E08D /* ViewController.swift in Sources */,
+				0191B89E21DC0C1100D55C89 /* PlayPauseButton.swift in Sources */,
 				0182F10221D83E640038E08D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -4,11 +4,16 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class RootTabBarController: UITabBarController {
+
+    let playPauseButton = UIButton(frame: .zero)
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        playPauseButton
+
     }
 
 
