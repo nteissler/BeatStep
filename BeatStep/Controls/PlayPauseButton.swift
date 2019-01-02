@@ -7,35 +7,86 @@ import UIKit
 @IBDesignable
 class PlayPauseButton: UIButton {
 
+    enum PlaybackState {
+        case play, pause
+
+        fileprivate mutating func toggle() {
+            self = self == .play ? .pause : .play
+        }
+    }
+    private var playbackState: PlaybackState = .play
+
+
     override init(frame: CGRect) {
         super.init(frame: frame)
-        clipsToBounds = false
+        commonInit()
     }
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        clipsToBounds = false
+        commonInit()
+    }
+
+    // MARK: Button Appearance Configuration
+    private func commonInit() {
+        addTarget(self, action: #selector(touchDown), for: .touchDown)
+        addTarget(self, action: #selector(touchUp), for: .touchUpInside)
+        addTarget(self, action: #selector(touchUp), for: .touchUpOutside)
+        addTarget(self, action: #selector(toggleState), for: .touchUpInside)
+    }
+
+    @objc private func touchDown() {
+        UIViewPropertyAnimator.runningPropertyAnimator(withDuration: 0.1, delay: 0, animations: {
+            self.layer.setAffineTransform(CGAffineTransform(scaleX: 0.95, y: 0.95))
+        }, completion: { _ in
+            self.setNeedsDisplay()
+        })
+
+    }
+
+    @objc private func touchUp() {
+        layer.setAffineTransform(.identity)
+        setNeedsDisplay()
+    }
+
+    @objc private func toggleState() {
+        playbackState.toggle()
     }
 
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
     override func draw(_ rect: CGRect) {
+        super.draw(rect)
+        let greenShade: UIColor
+        let whiteShade: UIColor
 
+        switch state {
+        case .normal:
+            greenShade = UIColor(named: "GreenEnabled")!
+            whiteShade = .white
+        default:
+            greenShade = UIColor(named: "GreenDepressed")!
+            whiteShade = .lightGray
+        }
         // Green Background Circle
         let insetBounds = self.bounds.insetBy(dx: 3, dy: 3)
-        UIColor(named: "GreenEnabled")?.setFill()
-        UIColor.black.setStroke()
+        greenShade.setFill()
+        UIColor.white.setStroke()
         let greenCircle = UIBezierPath(ovalIn: insetBounds)
         greenCircle.fill()
         greenCircle.stroke()
 
-        // Play Icon
-        UIColor.white.set()
-        let isosceles = UIBezierPath(isoscelesTringleIn: bounds, radians: .pi / 3.6)
-        isosceles.fill()
-        isosceles.stroke()
-
-        // Pause Icon
+        switch playbackState {
+        case .play:
+            whiteShade.set()
+            let isosceles = UIBezierPath(isoscelesTringleIn: bounds, radians: .pi / 3.6) // 50 degrees
+            isosceles.fill()
+            isosceles.stroke()
+        case .pause:
+            whiteShade.set()
+            let (rect1, rect2) = UIBezierPath.twoRectangles(in: bounds, radians: .pi / 3.6)
+            [rect1, rect2].forEach { $0.fill() }
+        }
     }
 }
 
@@ -48,10 +99,9 @@ private extension UIBezierPath {
     ///   - rect: The rect to inscribe the triangle in
     ///   - angle: The angle of the two equal angles of the isosceles triangle
     convenience init(isoscelesTringleIn rect: CGRect, radians: CGFloat) {
-        let scale: CGFloat = 0.8
-
-        let height = rect.width * 0.644 * scale
-        let endpoint = rect.width * 0.89 - 5
+        let horizontalShift: CGFloat = -5 // translate the triangle along the X-axis for centering
+        let height = rect.width * 0.5152
+        let endpoint = rect.width * 0.89 + horizontalShift
         let rightPoint = CGPoint(x: endpoint, y: rect.midY)
         let base = tan(radians / 2.0) * height // 0.5 * the length of the isosceles full base
 
@@ -69,5 +119,21 @@ private extension UIBezierPath {
         addLine(to: upperLeft)
         addLine(to: lowerLeft)
         close()
+    }
+
+    static func twoRectangles(in rect: CGRect, radians: CGFloat) -> (UIBezierPath, UIBezierPath) {
+        let h = tan(radians / 2.0) * 2.0 * rect.width * 0.5152
+        let w = rect.width * 0.2
+        let size = CGSize(width: w, height: h)
+
+        let topYCoord = (rect.height - h) / 2.0
+        let rect1Origin = CGPoint(x: w + 0.2 * w, y: topYCoord)
+        let rect2Origin = CGPoint(x: w * 3 - 0.2 * w, y: topYCoord)
+
+        let rect1 = CGRect(origin: rect1Origin, size: size)
+        let rect2 = CGRect(origin: rect2Origin, size: size)
+
+        return (UIBezierPath.init(roundedRect: rect1, cornerRadius: 2.0),
+                UIBezierPath.init(roundedRect: rect2, cornerRadius: 2.0))
     }
 }
