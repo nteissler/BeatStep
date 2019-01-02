@@ -8,13 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		0182F10221D83E640038E08D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0182F10121D83E640038E08D /* AppDelegate.swift */; };
-		0182F10421D83E640038E08D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0182F10321D83E640038E08D /* ViewController.swift */; };
+		0182F10421D83E640038E08D /* RootTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0182F10321D83E640038E08D /* RootTabBarController.swift */; };
 		0182F10721D83E640038E08D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0182F10521D83E640038E08D /* Main.storyboard */; };
 		0182F10921D83E670038E08D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0182F10821D83E670038E08D /* Assets.xcassets */; };
 		0182F10C21D83E670038E08D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0182F10A21D83E670038E08D /* LaunchScreen.storyboard */; };
 		0182F11721D83E670038E08D /* BeatStepTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0182F11621D83E670038E08D /* BeatStepTests.swift */; };
 		0182F12221D83E670038E08D /* BeatStepUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0182F12121D83E670038E08D /* BeatStepUITests.swift */; };
 		0191B89E21DC0C1100D55C89 /* PlayPauseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0191B89D21DC0C1100D55C89 /* PlayPauseButton.swift */; };
+		0191B8A021DC443E00D55C89 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0191B89F21DC443E00D55C89 /* Colors.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +38,7 @@
 /* Begin PBXFileReference section */
 		0182F0FE21D83E640038E08D /* BeatStep.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeatStep.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0182F10121D83E640038E08D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0182F10321D83E640038E08D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0182F10321D83E640038E08D /* RootTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabBarController.swift; sourceTree = "<group>"; };
 		0182F10621D83E640038E08D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0182F10821D83E670038E08D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0182F10B21D83E670038E08D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +50,7 @@
 		0182F12121D83E670038E08D /* BeatStepUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeatStepUITests.swift; sourceTree = "<group>"; };
 		0182F12321D83E670038E08D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0191B89D21DC0C1100D55C89 /* PlayPauseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayPauseButton.swift; sourceTree = "<group>"; };
+		0191B89F21DC443E00D55C89 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,11 +103,12 @@
 			children = (
 				0191B89C21DC0BDB00D55C89 /* Controls */,
 				0182F10121D83E640038E08D /* AppDelegate.swift */,
-				0182F10321D83E640038E08D /* ViewController.swift */,
+				0182F10321D83E640038E08D /* RootTabBarController.swift */,
 				0182F10521D83E640038E08D /* Main.storyboard */,
-				0182F10821D83E670038E08D /* Assets.xcassets */,
 				0182F10A21D83E670038E08D /* LaunchScreen.storyboard */,
 				0182F10D21D83E670038E08D /* Info.plist */,
+				0182F10821D83E670038E08D /* Assets.xcassets */,
+				0191B89F21DC443E00D55C89 /* Colors.xcassets */,
 			);
 			path = BeatStep;
 			sourceTree = "<group>";
@@ -241,6 +244,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0182F10C21D83E670038E08D /* LaunchScreen.storyboard in Resources */,
+				0191B8A021DC443E00D55C89 /* Colors.xcassets in Resources */,
 				0182F10921D83E670038E08D /* Assets.xcassets in Resources */,
 				0182F10721D83E640038E08D /* Main.storyboard in Resources */,
 			);
@@ -267,7 +271,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0182F10421D83E640038E08D /* ViewController.swift in Sources */,
+				0182F10421D83E640038E08D /* RootTabBarController.swift in Sources */,
 				0191B89E21DC0C1100D55C89 /* PlayPauseButton.swift in Sources */,
 				0182F10221D83E640038E08D /* AppDelegate.swift in Sources */,
 			);
