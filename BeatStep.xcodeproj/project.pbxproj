@@ -16,6 +16,7 @@
 		0182F12221D83E670038E08D /* BeatStepUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0182F12121D83E670038E08D /* BeatStepUITests.swift */; };
 		0191B89E21DC0C1100D55C89 /* PlayPauseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0191B89D21DC0C1100D55C89 /* PlayPauseButton.swift */; };
 		0191B8A021DC443E00D55C89 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0191B89F21DC443E00D55C89 /* Colors.xcassets */; };
+		01F936FC21DD65B000697113 /* CGPoint+Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F936FB21DD65B000697113 /* CGPoint+Geometry.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		0182F12321D83E670038E08D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0191B89D21DC0C1100D55C89 /* PlayPauseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayPauseButton.swift; sourceTree = "<group>"; };
 		0191B89F21DC443E00D55C89 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		01F936FB21DD65B000697113 /* CGPoint+Geometry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+Geometry.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				0182F10021D83E640038E08D /* BeatStep */,
+				01F936FA21DD658900697113 /* Extension Utilities */,
 				0182F11521D83E670038E08D /* BeatStepTests */,
 				0182F12021D83E670038E08D /* BeatStepUITests */,
 				0182F0FF21D83E640038E08D /* Products */,
@@ -137,6 +140,14 @@
 				0191B89D21DC0C1100D55C89 /* PlayPauseButton.swift */,
 			);
 			path = Controls;
+			sourceTree = "<group>";
+		};
+		01F936FA21DD658900697113 /* Extension Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				01F936FB21DD65B000697113 /* CGPoint+Geometry.swift */,
+			);
+			path = "Extension Utilities";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,6 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0182F10421D83E640038E08D /* RootTabBarController.swift in Sources */,
+				01F936FC21DD65B000697113 /* CGPoint+Geometry.swift in Sources */,
 				0191B89E21DC0C1100D55C89 /* PlayPauseButton.swift in Sources */,
 				0182F10221D83E640038E08D /* AppDelegate.swift in Sources */,
 			);

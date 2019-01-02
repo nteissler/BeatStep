@@ -49,7 +49,17 @@ class PlayPauseButton: UIButton {
         setNeedsDisplay()
     }
 
-    @objc private func toggleState() {
+
+    override func point(inside point: CGPoint, with event: UIEvent?) -> Bool {
+        return point.withinEllipse(inscribedIn: bounds)
+    }
+
+    @objc private func toggleState(sender: UIButton, event: UIEvent) {
+        // GOTCHA: Sometimes .touchUpInside will trigger if the user slides and removes their finger
+        // from the bounds fast enough. We don't want that behavior.
+        guard event.allTouches?.contains(where: { self.bounds.contains($0.location(in: self)) }) ?? false else {
+            return
+        }
         playbackState.toggle()
     }
 
