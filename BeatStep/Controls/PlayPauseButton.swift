@@ -16,7 +16,6 @@ class PlayPauseButton: UIButton {
     }
     private var playbackState: PlaybackState = .play
 
-
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
@@ -27,7 +26,7 @@ class PlayPauseButton: UIButton {
         commonInit()
     }
 
-    // MARK: Button Appearance Configuration
+    // MARK: - Button Dynamic Appearance Configuration
     private func commonInit() {
         addTarget(self, action: #selector(touchDown), for: .touchDown)
         addTarget(self, action: #selector(touchUp), for: .touchUpInside)
@@ -63,8 +62,7 @@ class PlayPauseButton: UIButton {
         playbackState.toggle()
     }
 
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
+    // MARK: - Drawing
     override func draw(_ rect: CGRect) {
         super.draw(rect)
         let greenShade: UIColor
