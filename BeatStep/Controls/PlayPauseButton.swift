@@ -81,7 +81,9 @@ class PlayPauseButton: UIButton {
         // Green Background Circle
         let insetBounds = self.bounds.insetBy(dx: 3, dy: 3)
         greenShade.setFill()
-        UIColor.white.setStroke()
+        // Try to match the transluscent tab bar to the stroke color:
+        // https://developer.apple.com/library/archive/qa/qa1808/_index.html
+        UIColor(named: "ThemeGray")!.setStroke()
         let greenCircle = UIBezierPath(ovalIn: insetBounds)
         greenCircle.fill()
         greenCircle.stroke()
