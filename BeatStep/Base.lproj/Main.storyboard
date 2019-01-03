@@ -60,6 +60,11 @@
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bVT-sL-f1q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="JJ5-bd-kgH" customClass="RootAppCoordiantor" customModule="BeatStep" customModuleProvider="target">
+                    <connections>
+                        <outlet property="rootTabBarController" destination="0kk-3k-2dw" id="qlk-UA-mb8"/>
+                    </connections>
+                </customObject>
             </objects>
             <point key="canvasLocation" x="-948" y="-134"/>
         </scene>

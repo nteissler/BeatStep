@@ -16,8 +16,8 @@ class PlayPauseButton: UIButton {
     }
     private var playbackState: PlaybackState = .play
 
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+    init(play: @escaping () -> Void, pause: @escaping () -> Void) {
+        super.init(frame: .zero)
         commonInit()
     }
 

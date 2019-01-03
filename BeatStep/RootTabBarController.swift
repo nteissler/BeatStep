@@ -6,7 +6,8 @@ import UIKit
 
 class RootTabBarController: UITabBarController {
 
-    let playPauseButton: UIButton = PlayPauseButton(type: .custom)
+    lazy var playPauseButton: UIButton = PlayPauseButton(play: { [weak self] in self?.viewModel.play() }, pause: { [weak self] in self?.viewModel.pause() } )
+    var viewModel: RootViewModel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -14,7 +15,7 @@ class RootTabBarController: UITabBarController {
     }
 
     @objc func buttonTapped(_ sender: UIButton) {
-        print("button tapped")
+        
     }
 
     // MARK: Subview Layout
