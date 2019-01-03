@@ -17,6 +17,7 @@
 		0191B89E21DC0C1100D55C89 /* PlayPauseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0191B89D21DC0C1100D55C89 /* PlayPauseButton.swift */; };
 		0191B8A021DC443E00D55C89 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0191B89F21DC443E00D55C89 /* Colors.xcassets */; };
 		01F936FC21DD65B000697113 /* CGPoint+Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F936FB21DD65B000697113 /* CGPoint+Geometry.swift */; };
+		01F936FF21DDCA1100697113 /* Images.html in Resources */ = {isa = PBXBuildFile; fileRef = 01F936FE21DDCA1100697113 /* Images.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		0191B89D21DC0C1100D55C89 /* PlayPauseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayPauseButton.swift; sourceTree = "<group>"; };
 		0191B89F21DC443E00D55C89 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		01F936FB21DD65B000697113 /* CGPoint+Geometry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+Geometry.swift"; sourceTree = "<group>"; };
+		01F936FE21DDCA1100697113 /* Images.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = Images.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 		0182F10021D83E640038E08D /* BeatStep */ = {
 			isa = PBXGroup;
 			children = (
+				01F936FD21DDC9E800697113 /* Accreditation */,
 				0191B89C21DC0BDB00D55C89 /* Controls */,
 				0182F10121D83E640038E08D /* AppDelegate.swift */,
 				0182F10321D83E640038E08D /* RootTabBarController.swift */,
@@ -148,6 +151,14 @@
 				01F936FB21DD65B000697113 /* CGPoint+Geometry.swift */,
 			);
 			path = "Extension Utilities";
+			sourceTree = "<group>";
+		};
+		01F936FD21DDC9E800697113 /* Accreditation */ = {
+			isa = PBXGroup;
+			children = (
+				01F936FE21DDCA1100697113 /* Images.html */,
+			);
+			path = Accreditation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,6 +265,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01F936FF21DDCA1100697113 /* Images.html in Resources */,
 				0182F10C21D83E670038E08D /* LaunchScreen.storyboard in Resources */,
 				0191B8A021DC443E00D55C89 /* Colors.xcassets in Resources */,
 				0182F10921D83E670038E08D /* Assets.xcassets in Resources */,

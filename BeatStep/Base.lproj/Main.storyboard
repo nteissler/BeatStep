@@ -21,7 +21,7 @@
                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="cGR-hH-qKa"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="🏃‍♂️" id="lzE-1a-qI4"/>
+                    <tabBarItem key="tabBarItem" title="Cadence" image="Footsteps" id="lzE-1a-qI4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x1D-5C-fWQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -37,7 +37,7 @@
                         <color key="backgroundColor" name="controlAccentColor" catalog="System" colorSpace="catalog"/>
                         <viewLayoutGuide key="safeArea" id="841-q6-xoU"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="🐭" id="R3V-4V-UWC"/>
+                    <tabBarItem key="tabBarItem" title="Pitch" image="Sound Wave" id="R3V-4V-UWC"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="czf-aD-ZFE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -52,6 +52,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" name="ThemeBarTint"/>
+                        <color key="selectedImageTintColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="ONo-3P-ds3" kind="relationship" relationship="viewControllers" id="tce-Ho-K3q"/>
@@ -64,8 +65,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Footsteps" width="75" height="75"/>
+        <image name="Sound Wave" width="75" height="75"/>
         <namedColor name="ThemeBarTint">
-            <color red="0.79000002145767212" green="0.81300002336502075" blue="0.87999999523162842" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.8399999737739563" green="0.86299997568130493" blue="0.93000000715255737" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
