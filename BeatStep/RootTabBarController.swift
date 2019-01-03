@@ -6,11 +6,19 @@ import UIKit
 
 class RootTabBarController: UITabBarController {
 
-    let playPauseButton = PlayPauseButton(type: .custom)
-
+    let playPauseButton: UIButton = PlayPauseButton(type: .custom)
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        addPlayButtonToView()
+    }
+
+    @objc func buttonTapped(_ sender: UIButton) {
+        print("button tapped")
+    }
+
+    // MARK: Subview Layout
+    private func addPlayButtonToView() {
         view.addSubview(playPauseButton)
 
         playPauseButton.translatesAutoresizingMaskIntoConstraints = false
@@ -24,14 +32,8 @@ class RootTabBarController: UITabBarController {
         optional.priority = .defaultHigh
         optional.isActive = true
         playPauseButton.heightAnchor.constraint(lessThanOrEqualTo: tabBar.heightAnchor, multiplier: 1.8).isActive = true
-        
+
         playPauseButton.addTarget(self, action: #selector(buttonTapped(_:)), for: .touchUpInside)
     }
-
-    @IBAction func buttonTapped(_ sender: UIButton) {
-        print("button tapped")
-    }
-
-
 }
 
