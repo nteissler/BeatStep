@@ -7,6 +7,9 @@ import UIKit
 @IBDesignable
 class PlayPauseButton: UIButton {
 
+    private let playClosure: (() -> Void)?
+    private let pauseClosure: (() -> Void)?
+
     enum PlaybackState {
         case play, pause
 
@@ -17,11 +20,15 @@ class PlayPauseButton: UIButton {
     private var playbackState: PlaybackState = .play
 
     init(play: @escaping () -> Void, pause: @escaping () -> Void) {
+        playClosure = play
+        pauseClosure = pause
         super.init(frame: .zero)
         commonInit()
     }
 
     required init?(coder aDecoder: NSCoder) {
+        playClosure = nil
+        pauseClosure = nil
         super.init(coder: aDecoder)
         commonInit()
     }
@@ -58,6 +65,12 @@ class PlayPauseButton: UIButton {
         // from the bounds fast enough. We don't want that behavior.
         guard event.allTouches?.contains(where: { self.bounds.contains($0.location(in: self)) }) ?? false else {
             return
+        }
+        switch playbackState {
+        case .play:
+            playClosure?()
+        case .pause:
+            pauseClosure?()
         }
         playbackState.toggle()
     }

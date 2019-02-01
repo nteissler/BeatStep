@@ -6,7 +6,8 @@ import UIKit
 
 class RootTabBarController: UITabBarController {
 
-    lazy var playPauseButton: UIButton = PlayPauseButton(play: { [weak self] in self?.viewModel.play() }, pause: { [weak self] in self?.viewModel.pause() } )
+    lazy var playPauseButton: UIButton = PlayPauseButton(play: { [weak self] in self?.viewModel.play() },
+                                                         pause: { [weak self] in self?.viewModel.pause() } )
     var viewModel: RootViewModel!
 
     override func viewDidLoad() {
