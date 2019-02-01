@@ -14,10 +14,6 @@ class RootTabBarController: UITabBarController {
         addPlayButtonToView()
     }
 
-    @objc func buttonTapped(_ sender: UIButton) {
-        
-    }
-
     // MARK: Subview Layout
     private func addPlayButtonToView() {
         view.addSubview(playPauseButton)
@@ -33,8 +29,6 @@ class RootTabBarController: UITabBarController {
         optional.priority = .defaultHigh
         optional.isActive = true
         playPauseButton.heightAnchor.constraint(lessThanOrEqualTo: tabBar.heightAnchor, multiplier: 1.8).isActive = true
-
-        playPauseButton.addTarget(self, action: #selector(buttonTapped(_:)), for: .touchUpInside)
     }
 }
 

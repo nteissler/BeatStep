@@ -18,7 +18,7 @@
 		0191B8A021DC443E00D55C89 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0191B89F21DC443E00D55C89 /* Colors.xcassets */; };
 		01F79C7321DE6F46006DBDEC /* RootAppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F79C7221DE6F46006DBDEC /* RootAppCoordinator.swift */; };
 		01F79C7521DE7043006DBDEC /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F79C7421DE7043006DBDEC /* RootViewModel.swift */; };
-		01F79C7621DE748E006DBDEC /* AudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F79C6D21DE6986006DBDEC /* AudioKit.framework */; };
+		01F79C7E21DE7AE7006DBDEC /* AudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F79C7D21DE7AE7006DBDEC /* AudioKit.framework */; };
 		01F936FC21DD65B000697113 /* CGPoint+Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F936FB21DD65B000697113 /* CGPoint+Geometry.swift */; };
 		01F936FF21DDCA1100697113 /* Images.html in Resources */ = {isa = PBXBuildFile; fileRef = 01F936FE21DDCA1100697113 /* Images.html */; };
 /* End PBXBuildFile section */
@@ -56,9 +56,9 @@
 		0182F12321D83E670038E08D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0191B89D21DC0C1100D55C89 /* PlayPauseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayPauseButton.swift; sourceTree = "<group>"; };
 		0191B89F21DC443E00D55C89 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
-		01F79C6D21DE6986006DBDEC /* AudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioKit.framework; path = Carthage/Build/iOS/AudioKit.framework; sourceTree = "<group>"; };
 		01F79C7221DE6F46006DBDEC /* RootAppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootAppCoordinator.swift; sourceTree = "<group>"; };
 		01F79C7421DE7043006DBDEC /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
+		01F79C7D21DE7AE7006DBDEC /* AudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioKit.framework; path = Carthage/Build/iOS/AudioKit.framework; sourceTree = "<group>"; };
 		01F936FB21DD65B000697113 /* CGPoint+Geometry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+Geometry.swift"; sourceTree = "<group>"; };
 		01F936FE21DDCA1100697113 /* Images.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = Images.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -68,7 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01F79C7621DE748E006DBDEC /* AudioKit.framework in Frameworks */,
+				01F79C7E21DE7AE7006DBDEC /* AudioKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,7 +158,7 @@
 		01F79C6F21DE699C006DBDEC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				01F79C6D21DE6986006DBDEC /* AudioKit.framework */,
+				01F79C7D21DE7AE7006DBDEC /* AudioKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -247,6 +247,11 @@
 				TargetAttributes = {
 					0182F0FD21D83E640038E08D = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					0182F11121D83E670038E08D = {
 						CreatedOnToolsVersion = 10.1;
@@ -423,13 +428,15 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS/**";
+				HEADER_SEARCH_PATHS = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-lc++";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_INCLUDE_PATHS = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -479,12 +486,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS/**";
+				HEADER_SEARCH_PATHS = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				OTHER_LDFLAGS = "-lc++";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_INCLUDE_PATHS = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -498,6 +507,8 @@
 				DEVELOPMENT_TEAM = PJHPF8GAZG;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/",
+					"$(PROJECT_DIR)/Carthage",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = BeatStep/Info.plist;
@@ -520,6 +531,8 @@
 				DEVELOPMENT_TEAM = PJHPF8GAZG;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/",
+					"$(PROJECT_DIR)/Carthage",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = BeatStep/Info.plist;
