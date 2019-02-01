@@ -9,9 +9,21 @@ class RootViewModel {
     let metronome = AKMetronome()
 
     init() {
+//        AKSettings.enableRouteChangeHandling = false
+//        AKSettings.enableCategoryChangeHandling = false
+//        AKSettings.disableAVAudioSessionCategoryManagement = true
+//        AKSettings.disableAudioSessionDeactivationOnStop = false
+        AKSettings.playbackWhileMuted = true
+        do {
+            try AKSettings.setSession(category: .playback, with: [.mixWithOthers, .allowBluetooth])
+        } catch {
+            print(error)
+        }
         AudioKit.output = metronome
+
 //         FIXME: Error handling
         try! AudioKit.start()
+
     }
 
     func play() {

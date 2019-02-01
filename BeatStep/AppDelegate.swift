@@ -3,15 +3,21 @@
 // Copyright © 2018 Nick Teissler. All rights reserved.
 
 import UIKit
+import AudioKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        AKSettings.allowAirPlay = true;
+        AKSettings.enableCategoryChangeHandling = true
+        AKSettings.enableRouteChangeHandling = true
+        AKSettings.defaultToSpeaker = true
+        AKSettings.useBluetooth = true // seems to mess up things a bit. E.g. if a new device is connected and this flag is true, it would automatically switch!
+        AKSettings.bluetoothOptions = [.allowBluetoothA2DP ] // .allowBluetooth creates many beeps and downgrades audio quality.
+        AKSettings.notificationsEnabled = true
         return true
     }
 
