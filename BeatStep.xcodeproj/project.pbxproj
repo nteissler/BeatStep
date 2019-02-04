@@ -7,8 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01137DFB2204D909002F8A08 /* RxAtomic.framework.dSYM in Resources */ = {isa = PBXBuildFile; fileRef = 01137DF02204D909002F8A08 /* RxAtomic.framework.dSYM */; };
+		01137DFD2204D909002F8A08 /* RxAtomic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01137DF22204D909002F8A08 /* RxAtomic.framework */; };
+		01137DFE2204D909002F8A08 /* RxSwift.framework.dSYM in Resources */ = {isa = PBXBuildFile; fileRef = 01137DF32204D909002F8A08 /* RxSwift.framework.dSYM */; };
+		01137E002204D909002F8A08 /* RxTest.framework.dSYM in Resources */ = {isa = PBXBuildFile; fileRef = 01137DF52204D909002F8A08 /* RxTest.framework.dSYM */; };
+		01137E012204D909002F8A08 /* RxCocoa.framework.dSYM in Resources */ = {isa = PBXBuildFile; fileRef = 01137DF62204D909002F8A08 /* RxCocoa.framework.dSYM */; };
+		01137E022204D909002F8A08 /* RxBlocking.framework.dSYM in Resources */ = {isa = PBXBuildFile; fileRef = 01137DF72204D909002F8A08 /* RxBlocking.framework.dSYM */; };
+		01137E052204D927002F8A08 /* SliderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01137E042204D927002F8A08 /* SliderViewController.swift */; };
+		01137E072204D962002F8A08 /* SliderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01137E062204D962002F8A08 /* SliderViewModel.swift */; };
+		01137E092204DC79002F8A08 /* RxAtomic.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 01137DF22204D909002F8A08 /* RxAtomic.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		01137E0A2204DC79002F8A08 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01137DF82204D909002F8A08 /* RxCocoa.framework */; };
+		01137E0B2204DC79002F8A08 /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 01137DF82204D909002F8A08 /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		01137E0C2204DC79002F8A08 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01137DF12204D909002F8A08 /* RxSwift.framework */; };
+		01137E0D2204DC79002F8A08 /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 01137DF12204D909002F8A08 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		01137E0F2204DC83002F8A08 /* AudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F79C7D21DE7AE7006DBDEC /* AudioKit.framework */; };
+		01137E102204DC83002F8A08 /* AudioKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 01F79C7D21DE7AE7006DBDEC /* AudioKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0182F10221D83E640038E08D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0182F10121D83E640038E08D /* AppDelegate.swift */; };
-		0182F10421D83E640038E08D /* RootTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0182F10321D83E640038E08D /* RootTabBarController.swift */; };
+		0182F10421D83E640038E08D /* BeatTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0182F10321D83E640038E08D /* BeatTabBarController.swift */; };
 		0182F10721D83E640038E08D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0182F10521D83E640038E08D /* Main.storyboard */; };
 		0182F10921D83E670038E08D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0182F10821D83E670038E08D /* Images.xcassets */; };
 		0182F10C21D83E670038E08D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0182F10A21D83E670038E08D /* LaunchScreen.storyboard */; };
@@ -16,9 +31,9 @@
 		0182F12221D83E670038E08D /* BeatStepUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0182F12121D83E670038E08D /* BeatStepUITests.swift */; };
 		0191B89E21DC0C1100D55C89 /* PlayPauseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0191B89D21DC0C1100D55C89 /* PlayPauseButton.swift */; };
 		0191B8A021DC443E00D55C89 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0191B89F21DC443E00D55C89 /* Colors.xcassets */; };
-		01F79C7321DE6F46006DBDEC /* RootAppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F79C7221DE6F46006DBDEC /* RootAppCoordinator.swift */; };
-		01F79C7521DE7043006DBDEC /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F79C7421DE7043006DBDEC /* RootViewModel.swift */; };
-		01F79C7E21DE7AE7006DBDEC /* AudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F79C7D21DE7AE7006DBDEC /* AudioKit.framework */; };
+		01F086DB220671FC00869DAD /* ValueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F086DA220671FC00869DAD /* ValueViewController.swift */; };
+		01F79C7321DE6F46006DBDEC /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F79C7221DE6F46006DBDEC /* AppCoordinator.swift */; };
+		01F79C7521DE7043006DBDEC /* MetronomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F79C7421DE7043006DBDEC /* MetronomeViewModel.swift */; };
 		01F936FC21DD65B000697113 /* CGPoint+Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F936FB21DD65B000697113 /* CGPoint+Geometry.swift */; };
 		01F936FF21DDCA1100697113 /* Images.html in Resources */ = {isa = PBXBuildFile; fileRef = 01F936FE21DDCA1100697113 /* Images.html */; };
 /* End PBXBuildFile section */
@@ -40,10 +55,40 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		01137E0E2204DC79002F8A08 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				01137E102204DC83002F8A08 /* AudioKit.framework in Embed Frameworks */,
+				01137E0B2204DC79002F8A08 /* RxCocoa.framework in Embed Frameworks */,
+				01137E092204DC79002F8A08 /* RxAtomic.framework in Embed Frameworks */,
+				01137E0D2204DC79002F8A08 /* RxSwift.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		01137DEE2204D909002F8A08 /* AudioKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioKitUI.framework; path = Carthage/Build/iOS/AudioKitUI.framework; sourceTree = "<group>"; };
+		01137DEF2204D909002F8A08 /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
+		01137DF02204D909002F8A08 /* RxAtomic.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = RxAtomic.framework.dSYM; path = Carthage/Build/iOS/RxAtomic.framework.dSYM; sourceTree = "<group>"; };
+		01137DF12204D909002F8A08 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		01137DF22204D909002F8A08 /* RxAtomic.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxAtomic.framework; path = Carthage/Build/iOS/RxAtomic.framework; sourceTree = "<group>"; };
+		01137DF32204D909002F8A08 /* RxSwift.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = RxSwift.framework.dSYM; path = Carthage/Build/iOS/RxSwift.framework.dSYM; sourceTree = "<group>"; };
+		01137DF42204D909002F8A08 /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTest.framework; path = Carthage/Build/iOS/RxTest.framework; sourceTree = "<group>"; };
+		01137DF52204D909002F8A08 /* RxTest.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = RxTest.framework.dSYM; path = Carthage/Build/iOS/RxTest.framework.dSYM; sourceTree = "<group>"; };
+		01137DF62204D909002F8A08 /* RxCocoa.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = RxCocoa.framework.dSYM; path = Carthage/Build/iOS/RxCocoa.framework.dSYM; sourceTree = "<group>"; };
+		01137DF72204D909002F8A08 /* RxBlocking.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = RxBlocking.framework.dSYM; path = Carthage/Build/iOS/RxBlocking.framework.dSYM; sourceTree = "<group>"; };
+		01137DF82204D909002F8A08 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		01137E042204D927002F8A08 /* SliderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderViewController.swift; sourceTree = "<group>"; };
+		01137E062204D962002F8A08 /* SliderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderViewModel.swift; sourceTree = "<group>"; };
 		0182F0FE21D83E640038E08D /* BeatStep.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeatStep.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0182F10121D83E640038E08D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0182F10321D83E640038E08D /* RootTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabBarController.swift; sourceTree = "<group>"; };
+		0182F10321D83E640038E08D /* BeatTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeatTabBarController.swift; sourceTree = "<group>"; };
 		0182F10621D83E640038E08D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0182F10821D83E670038E08D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0182F10B21D83E670038E08D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,8 +101,9 @@
 		0182F12321D83E670038E08D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0191B89D21DC0C1100D55C89 /* PlayPauseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayPauseButton.swift; sourceTree = "<group>"; };
 		0191B89F21DC443E00D55C89 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
-		01F79C7221DE6F46006DBDEC /* RootAppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootAppCoordinator.swift; sourceTree = "<group>"; };
-		01F79C7421DE7043006DBDEC /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
+		01F086DA220671FC00869DAD /* ValueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueViewController.swift; sourceTree = "<group>"; };
+		01F79C7221DE6F46006DBDEC /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		01F79C7421DE7043006DBDEC /* MetronomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetronomeViewModel.swift; sourceTree = "<group>"; };
 		01F79C7D21DE7AE7006DBDEC /* AudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioKit.framework; path = Carthage/Build/iOS/AudioKit.framework; sourceTree = "<group>"; };
 		01F936FB21DD65B000697113 /* CGPoint+Geometry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+Geometry.swift"; sourceTree = "<group>"; };
 		01F936FE21DDCA1100697113 /* Images.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = Images.html; sourceTree = "<group>"; };
@@ -68,7 +114,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01F79C7E21DE7AE7006DBDEC /* AudioKit.framework in Frameworks */,
+				01137E0C2204DC79002F8A08 /* RxSwift.framework in Frameworks */,
+				01137E0A2204DC79002F8A08 /* RxCocoa.framework in Frameworks */,
+				01137DFD2204D909002F8A08 /* RxAtomic.framework in Frameworks */,
+				01137E0F2204DC83002F8A08 /* AudioKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,9 +165,10 @@
 				01F936FD21DDC9E800697113 /* Accreditation */,
 				0191B89C21DC0BDB00D55C89 /* Controls */,
 				0182F10121D83E640038E08D /* AppDelegate.swift */,
-				01F79C7221DE6F46006DBDEC /* RootAppCoordinator.swift */,
-				01F79C7421DE7043006DBDEC /* RootViewModel.swift */,
-				0182F10321D83E640038E08D /* RootTabBarController.swift */,
+				01F79C7221DE6F46006DBDEC /* AppCoordinator.swift */,
+				01F79C7421DE7043006DBDEC /* MetronomeViewModel.swift */,
+				01F086DA220671FC00869DAD /* ValueViewController.swift */,
+				0182F10321D83E640038E08D /* BeatTabBarController.swift */,
 				0182F10521D83E640038E08D /* Main.storyboard */,
 				0182F10A21D83E670038E08D /* LaunchScreen.storyboard */,
 				0182F10D21D83E670038E08D /* Info.plist */,
@@ -151,6 +201,8 @@
 			isa = PBXGroup;
 			children = (
 				0191B89D21DC0C1100D55C89 /* PlayPauseButton.swift */,
+				01137E042204D927002F8A08 /* SliderViewController.swift */,
+				01137E062204D962002F8A08 /* SliderViewModel.swift */,
 			);
 			path = Controls;
 			sourceTree = "<group>";
@@ -158,6 +210,17 @@
 		01F79C6F21DE699C006DBDEC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				01137DEE2204D909002F8A08 /* AudioKitUI.framework */,
+				01137DF22204D909002F8A08 /* RxAtomic.framework */,
+				01137DF02204D909002F8A08 /* RxAtomic.framework.dSYM */,
+				01137DEF2204D909002F8A08 /* RxBlocking.framework */,
+				01137DF72204D909002F8A08 /* RxBlocking.framework.dSYM */,
+				01137DF82204D909002F8A08 /* RxCocoa.framework */,
+				01137DF62204D909002F8A08 /* RxCocoa.framework.dSYM */,
+				01137DF12204D909002F8A08 /* RxSwift.framework */,
+				01137DF32204D909002F8A08 /* RxSwift.framework.dSYM */,
+				01137DF42204D909002F8A08 /* RxTest.framework */,
+				01137DF52204D909002F8A08 /* RxTest.framework.dSYM */,
 				01F79C7D21DE7AE7006DBDEC /* AudioKit.framework */,
 			);
 			name = Frameworks;
@@ -189,6 +252,7 @@
 				0182F0FA21D83E640038E08D /* Sources */,
 				0182F0FB21D83E640038E08D /* Frameworks */,
 				0182F0FC21D83E640038E08D /* Resources */,
+				01137E0E2204DC79002F8A08 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -289,10 +353,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				01F936FF21DDCA1100697113 /* Images.html in Resources */,
+				01137DFB2204D909002F8A08 /* RxAtomic.framework.dSYM in Resources */,
 				0182F10C21D83E670038E08D /* LaunchScreen.storyboard in Resources */,
 				0191B8A021DC443E00D55C89 /* Colors.xcassets in Resources */,
 				0182F10921D83E670038E08D /* Images.xcassets in Resources */,
+				01137E022204D909002F8A08 /* RxBlocking.framework.dSYM in Resources */,
 				0182F10721D83E640038E08D /* Main.storyboard in Resources */,
+				01137E002204D909002F8A08 /* RxTest.framework.dSYM in Resources */,
+				01137E012204D909002F8A08 /* RxCocoa.framework.dSYM in Resources */,
+				01137DFE2204D909002F8A08 /* RxSwift.framework.dSYM in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,12 +386,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0182F10421D83E640038E08D /* RootTabBarController.swift in Sources */,
-				01F79C7321DE6F46006DBDEC /* RootAppCoordinator.swift in Sources */,
+				0182F10421D83E640038E08D /* BeatTabBarController.swift in Sources */,
+				01137E052204D927002F8A08 /* SliderViewController.swift in Sources */,
+				01F79C7321DE6F46006DBDEC /* AppCoordinator.swift in Sources */,
 				01F936FC21DD65B000697113 /* CGPoint+Geometry.swift in Sources */,
 				0191B89E21DC0C1100D55C89 /* PlayPauseButton.swift in Sources */,
-				01F79C7521DE7043006DBDEC /* RootViewModel.swift in Sources */,
+				01F79C7521DE7043006DBDEC /* MetronomeViewModel.swift in Sources */,
 				0182F10221D83E640038E08D /* AppDelegate.swift in Sources */,
+				01F086DB220671FC00869DAD /* ValueViewController.swift in Sources */,
+				01137E072204D962002F8A08 /* SliderViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -507,8 +579,6 @@
 				DEVELOPMENT_TEAM = PJHPF8GAZG;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/",
-					"$(PROJECT_DIR)/Carthage",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = BeatStep/Info.plist;
@@ -531,8 +601,6 @@
 				DEVELOPMENT_TEAM = PJHPF8GAZG;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/",
-					"$(PROJECT_DIR)/Carthage",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = BeatStep/Info.plist;

@@ -3,34 +3,26 @@
 // Copyright © 2019 Nick Teissler. All rights reserved.
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 @IBDesignable
 class PlayPauseButton: UIButton {
+    private let input: BehaviorRelay<Bool>
+    private let bag = DisposeBag()
 
-    private let playClosure: (() -> Void)?
-    private let pauseClosure: (() -> Void)?
-
-    enum PlaybackState {
-        case play, pause
-
-        fileprivate mutating func toggle() {
-            self = self == .play ? .pause : .play
-        }
-    }
-    private var playbackState: PlaybackState = .play
-
-    init(play: @escaping () -> Void, pause: @escaping () -> Void) {
-        playClosure = play
-        pauseClosure = pause
+    init(input: Observable<Bool>) {
+        self.input = BehaviorRelay<Bool>(value: false)
+        input.bind(to: self.input).disposed(by: bag)
         super.init(frame: .zero)
+        self.input.asDriver().drive(onNext: { [unowned self] _ in
+            self.setNeedsDisplay()
+        }).disposed(by: bag)
         commonInit()
     }
 
     required init?(coder aDecoder: NSCoder) {
-        playClosure = nil
-        pauseClosure = nil
-        super.init(coder: aDecoder)
-        commonInit()
+        fatalError("init?(coder:) not implemented")
     }
 
     // MARK: - Button Dynamic Appearance Configuration
@@ -38,7 +30,6 @@ class PlayPauseButton: UIButton {
         addTarget(self, action: #selector(touchDown), for: .touchDown)
         addTarget(self, action: #selector(touchUp), for: .touchUpInside)
         addTarget(self, action: #selector(touchUp), for: .touchUpOutside)
-        addTarget(self, action: #selector(toggleState), for: .touchUpInside)
     }
 
     @objc private func touchDown() {
@@ -47,7 +38,6 @@ class PlayPauseButton: UIButton {
         }, completion: { _ in
             self.setNeedsDisplay()
         })
-
     }
 
     @objc private func touchUp() {
@@ -55,24 +45,8 @@ class PlayPauseButton: UIButton {
         setNeedsDisplay()
     }
 
-
     override func point(inside point: CGPoint, with event: UIEvent?) -> Bool {
         return point.withinEllipse(inscribedIn: bounds)
-    }
-
-    @objc private func toggleState(sender: UIButton, event: UIEvent) {
-        // GOTCHA: Sometimes .touchUpInside will trigger if the user slides and removes their finger
-        // from the bounds fast enough. We don't want that behavior.
-        guard event.allTouches?.contains(where: { self.bounds.contains($0.location(in: self)) }) ?? false else {
-            return
-        }
-        switch playbackState {
-        case .play:
-            playClosure?()
-        case .pause:
-            pauseClosure?()
-        }
-        playbackState.toggle()
     }
 
     // MARK: - Drawing
@@ -99,13 +73,12 @@ class PlayPauseButton: UIButton {
         greenCircle.fill()
         greenCircle.stroke()
 
-        switch playbackState {
-        case .play:
+        if !input.value {
             whiteShade.set()
             let isosceles = UIBezierPath(isoscelesTringleIn: bounds, radians: .pi / 3.6) // 50 degrees
             isosceles.fill()
             isosceles.stroke()
-        case .pause:
+        } else {
             whiteShade.set()
             let (rect1, rect2) = UIBezierPath.twoRectangles(in: bounds, radians: .pi / 3.6)
             [rect1, rect2].forEach { $0.fill() }
