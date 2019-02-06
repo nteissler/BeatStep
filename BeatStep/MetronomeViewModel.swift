@@ -13,7 +13,7 @@ class MetronomeViewModel {
 
     // MARK: - Inputs
     let cadence = PublishRelay<Double>()
-    let frequency = PublishRelay<Double>()
+    let frequency = PublishRelay<(Double, Double)>()
     let playToggle = PublishRelay<Void>()
 
     // MARK: - Outputs
@@ -51,8 +51,9 @@ class MetronomeViewModel {
             self.metronome.tempo = cadence
         }).disposed(by: bag)
 
-        frequency.debug("Frequency BehaviorSubject").subscribe(onNext: { (newFrequency) in
-            self.metronome.frequency1 = newFrequency
+        frequency.debug("Frequency BehaviorSubject").subscribe(onNext: { (newFrequencies) in
+            self.metronome.frequency1 = newFrequencies.0
+            self.metronome.frequency2 = newFrequencies.1
         } ).disposed(by: bag)
     }
 

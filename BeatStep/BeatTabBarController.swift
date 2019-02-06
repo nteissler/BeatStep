@@ -8,25 +8,15 @@ import RxCocoa
 
 class BeatTabBarController: UITabBarController {
 
-    var viewModel: MetronomeViewModel!
-    lazy var playPauseButton: UIButton = PlayPauseButton(input: viewModel!.playObservable)
+    let viewModel = MetronomeViewModel()
+    private lazy var playPauseButton: UIButton = PlayPauseButton(input: viewModel.playObservable)
     private let bag = DisposeBag()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         addPlayButtonToView()
         playPauseButton.rx.tap.asObservable().bind(to: viewModel.playToggle).disposed(by: bag)
-
-        let tapRecognizers = [UITapGestureRecognizer(), UITapGestureRecognizer()]
-        tapRecognizers.enumerated().forEach { (requiredTaps, tapRecognizer) in
-            tapRecognizer.numberOfTapsRequired = requiredTaps + 1
-            tapRecognizer.rx.event.map { _ in () }.bind(to: viewModel!.playToggle).disposed(by: bag)
-            tapRecognizer.cancelsTouchesInView = false
-            tapRecognizer.delegate = self
-            tapRecognizer.requiresExclusiveTouchType = true
-            view.addGestureRecognizer(tapRecognizer)
-        }
-        tapRecognizers[0].require(toFail: tapRecognizers[1])
+        installPlayPauseTapRecognizers()
     }
 
     // MARK: Subview Layout
@@ -44,6 +34,19 @@ class BeatTabBarController: UITabBarController {
         optional.priority = .defaultHigh
         optional.isActive = true
         playPauseButton.heightAnchor.constraint(lessThanOrEqualTo: tabBar.heightAnchor, multiplier: 1.8).isActive = true
+    }
+
+    private func installPlayPauseTapRecognizers() {
+        let tapRecognizers = [UITapGestureRecognizer(), UITapGestureRecognizer()]
+        tapRecognizers.enumerated().forEach { (requiredTaps, tapRecognizer) in
+            tapRecognizer.numberOfTapsRequired = requiredTaps + 1
+            tapRecognizer.rx.event.map { _ in () }.bind(to: viewModel.playToggle).disposed(by: bag)
+            tapRecognizer.cancelsTouchesInView = false
+            tapRecognizer.delegate = self
+            tapRecognizer.requiresExclusiveTouchType = true
+            view.addGestureRecognizer(tapRecognizer)
+        }
+        tapRecognizers[0].require(toFail: tapRecognizers[1])
     }
 }
 

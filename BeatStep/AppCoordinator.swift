@@ -13,8 +13,7 @@ import RxCocoa
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        let metronome = MetronomeViewModel()
-        rootTabBarController.viewModel = metronome
+        let metronome = rootTabBarController.viewModel
         rootTabBarController.viewControllers = makeTabChildren(metronome)
     }
 
@@ -26,9 +25,10 @@ import RxCocoa
     }
 
     private func makePitchViewController(_ metronome: MetronomeViewModel) -> ValueViewController<Float> {
-        let slider = SliderViewController(min: 300, max: 1200, initial: 600)
-        let pitchViewController = ValueViewController<Float>(control: slider)
-        pitchViewController.output.map(Double.init).bind(to: metronome.frequency).disposed(by: bag)
+        let downbeatSlider = SliderViewController(min: 300, max: 1200, initial: 600)
+        let upbeatSlider = SliderViewController(min: 300, max: 1200, initial: 450)
+        let pitchViewController = ValueViewController<Float>(controls: [downbeatSlider, upbeatSlider])
+        pitchViewController.output.map { (Double($0[0]), Double($0[1])) }.bind(to: metronome.frequency).disposed(by: bag)
         pitchViewController.view.backgroundColor = .green
         pitchViewController.title = NSLocalizedString("Pitch", comment: "Title for Pitch View Controller")
         pitchViewController.tabBarItem.image = #imageLiteral(resourceName: "Sound Wave.pdf")
@@ -37,8 +37,8 @@ import RxCocoa
 
     private func makeTempoViewController(_ metronome: MetronomeViewModel) -> ValueViewController<Float> {
         let slider = SliderViewController(min: 45, max: 150, initial: 75)
-        let tempoViewController = ValueViewController<Float>(control: slider)
-        tempoViewController.output.map(Double.init).bind(to: metronome.cadence).disposed(by: bag)
+        let tempoViewController = ValueViewController<Float>(controls: [slider])
+        tempoViewController.output.map{ $0.first }.filterNil().map(Double.init).bind(to: metronome.cadence).disposed(by: bag)
         tempoViewController.view.backgroundColor = .blue
         tempoViewController.title = NSLocalizedString("Tempo", comment: "Title for Tempo View Controller")
         tempoViewController.tabBarItem.image = #imageLiteral(resourceName: "Footsteps.pdf")
