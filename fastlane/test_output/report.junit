@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites name='BeatStepUITests.xctest' tests='3' failures='0'>
+  <testsuite name='BeatStepTests.BeatStepTests' tests='2' failures='0'>
+    <testcase classname='BeatStepTests.BeatStepTests' name='testExample' time='0.001'/>
+    <testcase classname='BeatStepTests.BeatStepTests' name='testPerformanceExample' time='0.353'/>
+  </testsuite>
+  <testsuite name='BeatStepUITests.BeatStepUITests' tests='1' failures='0'>
+    <testcase classname='BeatStepUITests.BeatStepUITests' name='testExample' time='4.551'/>
+  </testsuite>
+</testsuites>
