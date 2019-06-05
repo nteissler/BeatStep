@@ -20,8 +20,6 @@
 		01137E0B2204DC79002F8A08 /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 01137DF82204D909002F8A08 /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		01137E0C2204DC79002F8A08 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01137DF12204D909002F8A08 /* RxSwift.framework */; };
 		01137E0D2204DC79002F8A08 /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 01137DF12204D909002F8A08 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		01137E0F2204DC83002F8A08 /* AudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F79C7D21DE7AE7006DBDEC /* AudioKit.framework */; };
-		01137E102204DC83002F8A08 /* AudioKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 01F79C7D21DE7AE7006DBDEC /* AudioKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0182F10221D83E640038E08D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0182F10121D83E640038E08D /* AppDelegate.swift */; };
 		0182F10421D83E640038E08D /* BeatTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0182F10321D83E640038E08D /* BeatTabBarController.swift */; };
 		0182F10721D83E640038E08D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0182F10521D83E640038E08D /* Main.storyboard */; };
@@ -37,6 +35,11 @@
 		01F79C7521DE7043006DBDEC /* MetronomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F79C7421DE7043006DBDEC /* MetronomeViewModel.swift */; };
 		01F936FC21DD65B000697113 /* CGPoint+Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F936FB21DD65B000697113 /* CGPoint+Geometry.swift */; };
 		01F936FF21DDCA1100697113 /* Images.html in Resources */ = {isa = PBXBuildFile; fileRef = 01F936FE21DDCA1100697113 /* Images.html */; };
+		4184F3EC22A787010007D5C4 /* AudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4184F3E822A786960007D5C4 /* AudioKit.framework */; };
+		4184F3F022A787C00007D5C4 /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4184F3EF22A787C00007D5C4 /* RxRelay.framework */; };
+		4184F3F222A787D40007D5C4 /* RxRelay.framework.dSYM in Resources */ = {isa = PBXBuildFile; fileRef = 4184F3F122A787D40007D5C4 /* RxRelay.framework.dSYM */; };
+		4184F3F322A787DD0007D5C4 /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4184F3EF22A787C00007D5C4 /* RxRelay.framework */; };
+		4184F3F422A787DD0007D5C4 /* RxRelay.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4184F3EF22A787C00007D5C4 /* RxRelay.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,7 +66,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				01137E102204DC83002F8A08 /* AudioKit.framework in Embed Frameworks */,
+				4184F3F422A787DD0007D5C4 /* RxRelay.framework in Embed Frameworks */,
 				01137E0B2204DC79002F8A08 /* RxCocoa.framework in Embed Frameworks */,
 				01137E092204DC79002F8A08 /* RxAtomic.framework in Embed Frameworks */,
 				01137E0D2204DC79002F8A08 /* RxSwift.framework in Embed Frameworks */,
@@ -74,7 +77,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		01137DEE2204D909002F8A08 /* AudioKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioKitUI.framework; path = Carthage/Build/iOS/AudioKitUI.framework; sourceTree = "<group>"; };
 		01137DEF2204D909002F8A08 /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
 		01137DF02204D909002F8A08 /* RxAtomic.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = RxAtomic.framework.dSYM; path = Carthage/Build/iOS/RxAtomic.framework.dSYM; sourceTree = "<group>"; };
 		01137DF12204D909002F8A08 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
@@ -106,9 +108,11 @@
 		01F086DE220898B800869DAD /* Observable+Optional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+Optional.swift"; sourceTree = "<group>"; };
 		01F79C7221DE6F46006DBDEC /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		01F79C7421DE7043006DBDEC /* MetronomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetronomeViewModel.swift; sourceTree = "<group>"; };
-		01F79C7D21DE7AE7006DBDEC /* AudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioKit.framework; path = Carthage/Build/iOS/AudioKit.framework; sourceTree = "<group>"; };
 		01F936FB21DD65B000697113 /* CGPoint+Geometry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+Geometry.swift"; sourceTree = "<group>"; };
 		01F936FE21DDCA1100697113 /* Images.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = Images.html; sourceTree = "<group>"; };
+		4184F3E822A786960007D5C4 /* AudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioKit.framework; path = Carthage/Build/iOS/Static/AudioKit.framework; sourceTree = "<group>"; };
+		4184F3EF22A787C00007D5C4 /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = Carthage/Build/iOS/RxRelay.framework; sourceTree = "<group>"; };
+		4184F3F122A787D40007D5C4 /* RxRelay.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = RxRelay.framework.dSYM; path = Carthage/Build/iOS/RxRelay.framework.dSYM; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,9 +121,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				01137E0C2204DC79002F8A08 /* RxSwift.framework in Frameworks */,
+				4184F3F022A787C00007D5C4 /* RxRelay.framework in Frameworks */,
+				4184F3F322A787DD0007D5C4 /* RxRelay.framework in Frameworks */,
+				4184F3EC22A787010007D5C4 /* AudioKit.framework in Frameworks */,
 				01137E0A2204DC79002F8A08 /* RxCocoa.framework in Frameworks */,
 				01137DFD2204D909002F8A08 /* RxAtomic.framework in Frameworks */,
-				01137E0F2204DC83002F8A08 /* AudioKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,7 +227,9 @@
 		01F79C6F21DE699C006DBDEC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				01137DEE2204D909002F8A08 /* AudioKitUI.framework */,
+				4184F3F122A787D40007D5C4 /* RxRelay.framework.dSYM */,
+				4184F3EF22A787C00007D5C4 /* RxRelay.framework */,
+				4184F3E822A786960007D5C4 /* AudioKit.framework */,
 				01137DF22204D909002F8A08 /* RxAtomic.framework */,
 				01137DF02204D909002F8A08 /* RxAtomic.framework.dSYM */,
 				01137DEF2204D909002F8A08 /* RxBlocking.framework */,
@@ -232,7 +240,6 @@
 				01137DF32204D909002F8A08 /* RxSwift.framework.dSYM */,
 				01137DF42204D909002F8A08 /* RxTest.framework */,
 				01137DF52204D909002F8A08 /* RxTest.framework.dSYM */,
-				01F79C7D21DE7AE7006DBDEC /* AudioKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -322,6 +329,7 @@
 				TargetAttributes = {
 					0182F0FD21D83E640038E08D = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -330,10 +338,12 @@
 					};
 					0182F11121D83E670038E08D = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 						TestTargetID = 0182F0FD21D83E640038E08D;
 					};
 					0182F11C21D83E670038E08D = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 						TestTargetID = 0182F0FD21D83E640038E08D;
 					};
 				};
@@ -372,6 +382,7 @@
 				0182F10721D83E640038E08D /* Main.storyboard in Resources */,
 				01137E002204D909002F8A08 /* RxTest.framework.dSYM in Resources */,
 				01137E012204D909002F8A08 /* RxCocoa.framework.dSYM in Resources */,
+				4184F3F222A787D40007D5C4 /* RxRelay.framework.dSYM in Resources */,
 				01137DFE2204D909002F8A08 /* RxSwift.framework.dSYM in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -592,6 +603,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Build/iOS/Static",
 				);
 				INFOPLIST_FILE = BeatStep/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -600,7 +612,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = app.mikolabs.BeatStep;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -614,6 +626,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Build/iOS/Static",
 				);
 				INFOPLIST_FILE = BeatStep/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -622,7 +635,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = app.mikolabs.BeatStep;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -642,7 +655,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = app.mikolabs.BeatStepTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BeatStep.app/BeatStep";
 			};
@@ -663,7 +676,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = app.mikolabs.BeatStepTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BeatStep.app/BeatStep";
 			};
@@ -683,7 +696,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = app.mikolabs.BeatStepUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = BeatStep;
 			};
@@ -703,7 +716,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = app.mikolabs.BeatStepUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = BeatStep;
 			};
