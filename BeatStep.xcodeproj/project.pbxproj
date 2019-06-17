@@ -32,11 +32,11 @@
 		01F79C7521DE7043006DBDEC /* MetronomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F79C7421DE7043006DBDEC /* MetronomeViewModel.swift */; };
 		01F936FC21DD65B000697113 /* CGPoint+Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F936FB21DD65B000697113 /* CGPoint+Geometry.swift */; };
 		01F936FF21DDCA1100697113 /* Images.html in Resources */ = {isa = PBXBuildFile; fileRef = 01F936FE21DDCA1100697113 /* Images.html */; };
+		41759EA022B74D73008179C1 /* AudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41759E9F22B74D73008179C1 /* AudioKit.framework */; };
 		4184F3F022A787C00007D5C4 /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4184F3EF22A787C00007D5C4 /* RxRelay.framework */; };
 		4184F3F222A787D40007D5C4 /* RxRelay.framework.dSYM in Resources */ = {isa = PBXBuildFile; fileRef = 4184F3F122A787D40007D5C4 /* RxRelay.framework.dSYM */; };
 		4184F3F322A787DD0007D5C4 /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4184F3EF22A787C00007D5C4 /* RxRelay.framework */; };
 		4184F3F422A787DD0007D5C4 /* RxRelay.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4184F3EF22A787C00007D5C4 /* RxRelay.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		4192222A22B72FD200FAA2E1 /* AudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4192222922B72FD200FAA2E1 /* AudioKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,9 +104,9 @@
 		01F79C7421DE7043006DBDEC /* MetronomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetronomeViewModel.swift; sourceTree = "<group>"; };
 		01F936FB21DD65B000697113 /* CGPoint+Geometry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+Geometry.swift"; sourceTree = "<group>"; };
 		01F936FE21DDCA1100697113 /* Images.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = Images.html; sourceTree = "<group>"; };
+		41759E9F22B74D73008179C1 /* AudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioKit.framework; path = Carthage/Build/iOS/Static/AudioKit.framework; sourceTree = "<group>"; };
 		4184F3EF22A787C00007D5C4 /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = Carthage/Build/iOS/RxRelay.framework; sourceTree = "<group>"; };
 		4184F3F122A787D40007D5C4 /* RxRelay.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = RxRelay.framework.dSYM; path = Carthage/Build/iOS/RxRelay.framework.dSYM; sourceTree = "<group>"; };
-		4192222922B72FD200FAA2E1 /* AudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioKit.framework; path = ThirdPartyFramworks/AudioKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,7 +117,7 @@
 				01137E0C2204DC79002F8A08 /* RxSwift.framework in Frameworks */,
 				4184F3F022A787C00007D5C4 /* RxRelay.framework in Frameworks */,
 				4184F3F322A787DD0007D5C4 /* RxRelay.framework in Frameworks */,
-				4192222A22B72FD200FAA2E1 /* AudioKit.framework in Frameworks */,
+				41759EA022B74D73008179C1 /* AudioKit.framework in Frameworks */,
 				01137E0A2204DC79002F8A08 /* RxCocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -220,7 +220,7 @@
 		01F79C6F21DE699C006DBDEC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4192222922B72FD200FAA2E1 /* AudioKit.framework */,
+				41759E9F22B74D73008179C1 /* AudioKit.framework */,
 				4184F3F122A787D40007D5C4 /* RxRelay.framework.dSYM */,
 				4184F3EF22A787C00007D5C4 /* RxRelay.framework */,
 				01137DEF2204D909002F8A08 /* RxBlocking.framework */,
@@ -593,8 +593,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
-					"$(PROJECT_DIR)/ThirdPartyFrameworks/",
-					"$(PROJECT_DIR)/ThirdPartyFramworks",
+					"$(PROJECT_DIR)/Carthage/Build/iOS/Static",
 				);
 				INFOPLIST_FILE = BeatStep/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -619,6 +618,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 					"$(PROJECT_DIR)/ThirdPartyFrameworks/",
 					"$(PROJECT_DIR)/ThirdPartyFramworks",
+					"$(PROJECT_DIR)/Carthage/Build/iOS/Static",
 				);
 				INFOPLIST_FILE = BeatStep/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

@@ -1,3 +1,4 @@
-github "ReactiveX/RxSwift" ~> 5.0 
-# github "AudioKit/AudioKit" master
+# Temp comment out to try to cache and build audiokit
+# github "ReactiveX/RxSwift" ~> 5.0 
+github "AudioKit/AudioKit" "master"
 

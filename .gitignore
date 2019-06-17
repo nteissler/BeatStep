@@ -1,5 +1,5 @@
 # Carthage Directories
 Carthage/Checkouts
 
-# AudioKit Management
-ThirdPartyFrameworks
+Carthage/Build/iOS/Static
+

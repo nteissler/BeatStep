@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/nickteissler/Projects/BeatStep/AudioKit.framework">
+   </FileRef>
+   <FileRef
       location = "self:BeatStep.xcodeproj">
    </FileRef>
 </Workspace>
