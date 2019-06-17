@@ -46,7 +46,11 @@ class MetronomeViewModel {
         }).disposed(by: bag)
 
         // TODO: Error handling
-        try! AudioKit.start()
+        do {
+            try AudioKit.start()
+        } catch error {
+            print("probably running in the cloud. \(error)")
+        }
         cadence.debug("Cadence BehaviorSubject").subscribe(onNext: { [unowned self] (cadence) in
             self.metronome.tempo = cadence
         }).disposed(by: bag)
