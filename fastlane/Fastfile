@@ -24,7 +24,12 @@ platform :ios do
 
   desc "Unit Tests"
   lane :unit_tests do
-    run_tests(scheme: "BeatStep") 
+    run_tests(
+        project: "BeatStep.xcodeproj",
+        scheme: "BeatStep",
+        devices: ["iPhone X"],
+        reset_simulator: true,
+        prelaunch_simulator: true)
   end
       
 end

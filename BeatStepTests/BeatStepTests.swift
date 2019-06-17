@@ -20,5 +20,6 @@ class BeatStepTests: XCTestCase {
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         print("this is fine")
         XCTAssert(true)
+        sleep(10)
     }
 }
