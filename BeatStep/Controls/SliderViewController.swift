@@ -3,7 +3,6 @@
 // Copyright © 2019 Nick Teissler. All rights reserved.
 
 import UIKit
-import RxAtomic
 import RxSwift
 import RxCocoa
 

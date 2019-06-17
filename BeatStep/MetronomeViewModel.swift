@@ -20,11 +20,11 @@ class MetronomeViewModel {
     let playObservable: Observable<Bool>
 
     init() {
-        // TODO: Configure route change handling
-//        AKSettings.enableRouteChangeHandling = false
-//        AKSettings.enableCategoryChangeHandling = false
-//        AKSettings.disableAVAudioSessionCategoryManagement = true
-//        AKSettings.disableAudioSessionDeactivationOnStop = false
+//         TODO: Configure route change handling
+        AKSettings.enableRouteChangeHandling = false
+        AKSettings.enableCategoryChangeHandling = false
+        AKSettings.disableAVAudioSessionCategoryManagement = true
+        AKSettings.disableAudioSessionDeactivationOnStop = false
         AKSettings.playbackWhileMuted = true
         do {
             try AKSettings.setSession(category: .playback, with: [.mixWithOthers])

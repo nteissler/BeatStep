@@ -1,2 +1,5 @@
 # Carthage Directories
-Carthage/
+Carthage/Checkouts
+
+# AudioKit Management
+ThirdPartyFrameworks
