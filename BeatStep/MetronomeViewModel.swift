@@ -45,10 +45,9 @@ class MetronomeViewModel {
             }
         }).disposed(by: bag)
 
-        // TODO: Error handling
         do {
             try AudioKit.start()
-        } catch error {
+        } catch let error {
             print("probably running in the cloud. \(error)")
         }
         cadence.debug("Cadence BehaviorSubject").subscribe(onNext: { [unowned self] (cadence) in
