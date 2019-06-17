@@ -3,3 +3,6 @@ Carthage/Checkouts
 
 Carthage/Build/iOS/Static
 
+# Fastlane output
+fastlane
+
