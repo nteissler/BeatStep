@@ -1,6 +1,7 @@
 # Carthage Directories
 Carthage/Checkouts
 
+# Only ignore the built AudioKit
 Carthage/Build/iOS/Static
 
 # Fastlane output
