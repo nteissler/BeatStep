@@ -45,8 +45,12 @@ class MetronomeViewModel {
             }
         }).disposed(by: bag)
 
+        
         do {
-            try AudioKit.start()
+            // Return if this is a unit test
+            if NSClassFromString("XCTest") == nil {
+                try AudioKit.start()
+            }
         } catch let error {
             print("probably running in the cloud. \(error)")
         }

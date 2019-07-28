@@ -32,10 +32,10 @@
 		01F79C7521DE7043006DBDEC /* MetronomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F79C7421DE7043006DBDEC /* MetronomeViewModel.swift */; };
 		01F936FC21DD65B000697113 /* CGPoint+Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F936FB21DD65B000697113 /* CGPoint+Geometry.swift */; };
 		01F936FF21DDCA1100697113 /* Images.html in Resources */ = {isa = PBXBuildFile; fileRef = 01F936FE21DDCA1100697113 /* Images.html */; };
-		41341AEE22EE114100AE9BC7 /* SnapshotTesting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41341AEC22EE114100AE9BC7 /* SnapshotTesting.framework */; };
 		41341AEF22EE114100AE9BC7 /* SnapshotTesting.framework.dSYM in Resources */ = {isa = PBXBuildFile; fileRef = 41341AED22EE114100AE9BC7 /* SnapshotTesting.framework.dSYM */; };
 		41341AF022EE115600AE9BC7 /* SnapshotTesting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41341AEC22EE114100AE9BC7 /* SnapshotTesting.framework */; };
-		41341AF222EE128300AE9BC7 /* SnapshotTesting.framework.dSYM in Copy Carthage Debug Symbols */ = {isa = PBXBuildFile; fileRef = 41341AED22EE114100AE9BC7 /* SnapshotTesting.framework.dSYM */; };
+		41341AF222EE128300AE9BC7 /* SnapshotTesting.framework.dSYM in Copy Carthage Frameworks */ = {isa = PBXBuildFile; fileRef = 41341AED22EE114100AE9BC7 /* SnapshotTesting.framework.dSYM */; };
+		41341AF422EE189F00AE9BC7 /* SnapshotTesting.framework in Copy Carthage Frameworks */ = {isa = PBXBuildFile; fileRef = 41341AEC22EE114100AE9BC7 /* SnapshotTesting.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		41759EA022B74D73008179C1 /* AudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41759E9F22B74D73008179C1 /* AudioKit.framework */; };
 		4184F3F022A787C00007D5C4 /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4184F3EF22A787C00007D5C4 /* RxRelay.framework */; };
 		4184F3F222A787D40007D5C4 /* RxRelay.framework.dSYM in Resources */ = {isa = PBXBuildFile; fileRef = 4184F3F122A787D40007D5C4 /* RxRelay.framework.dSYM */; };
@@ -74,15 +74,25 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		41341AF122EE126E00AE9BC7 /* Copy Carthage Debug Symbols */ = {
+		41341AF122EE126E00AE9BC7 /* Copy Carthage Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
-			dstSubfolderSpec = 16;
+			dstSubfolderSpec = 10;
 			files = (
-				41341AF222EE128300AE9BC7 /* SnapshotTesting.framework.dSYM in Copy Carthage Debug Symbols */,
+				41341AF222EE128300AE9BC7 /* SnapshotTesting.framework.dSYM in Copy Carthage Frameworks */,
+				41341AF422EE189F00AE9BC7 /* SnapshotTesting.framework in Copy Carthage Frameworks */,
 			);
-			name = "Copy Carthage Debug Symbols";
+			name = "Copy Carthage Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		41341AF322EE188800AE9BC7 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -132,7 +142,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				01137E0C2204DC79002F8A08 /* RxSwift.framework in Frameworks */,
-				41341AEE22EE114100AE9BC7 /* SnapshotTesting.framework in Frameworks */,
 				4184F3F022A787C00007D5C4 /* RxRelay.framework in Frameworks */,
 				4184F3F322A787DD0007D5C4 /* RxRelay.framework in Frameworks */,
 				41759EA022B74D73008179C1 /* AudioKit.framework in Frameworks */,
@@ -305,10 +314,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0182F12921D83E670038E08D /* Build configuration list for PBXNativeTarget "BeatStepTests" */;
 			buildPhases = (
+				41341AF122EE126E00AE9BC7 /* Copy Carthage Frameworks */,
 				0182F10E21D83E670038E08D /* Sources */,
 				0182F10F21D83E670038E08D /* Frameworks */,
-				41341AF122EE126E00AE9BC7 /* Copy Carthage Debug Symbols */,
 				0182F11021D83E670038E08D /* Resources */,
+				41341AF322EE188800AE9BC7 /* CopyFiles */,
 			);
 			buildRules = (
 			);
