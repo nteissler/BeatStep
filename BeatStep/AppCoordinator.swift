@@ -31,7 +31,7 @@ import RxCocoa
         pitchViewController.output.map { (Double($0[0]), Double($0[1])) }.bind(to: metronome.frequency).disposed(by: bag)
         pitchViewController.view.backgroundColor = .green
         pitchViewController.title = NSLocalizedString("Pitch", comment: "Title for Pitch View Controller")
-        pitchViewController.tabBarItem.image = #imageLiteral(resourceName: "Sound Wave.pdf")
+        pitchViewController.tabBarItem.image = #imageLiteral(resourceName: "Sound Wave")
         return pitchViewController
     }
 
@@ -41,7 +41,7 @@ import RxCocoa
         tempoViewController.output.map{ $0.first }.filterNil().map(Double.init).bind(to: metronome.cadence).disposed(by: bag)
         tempoViewController.view.backgroundColor = .blue
         tempoViewController.title = NSLocalizedString("Tempo", comment: "Title for Tempo View Controller")
-        tempoViewController.tabBarItem.image = #imageLiteral(resourceName: "Footsteps.pdf")
+        tempoViewController.tabBarItem.image = #imageLiteral(resourceName: "Footsteps")
         return tempoViewController
     }
 }

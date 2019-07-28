@@ -54,6 +54,6 @@ extension BeatTabBarController: UIGestureRecognizerDelegate {
 
     // Treat any "negative space" on the screen as a play pause reqeust.
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
-        return !(touch.view is UIControl)
+        return !(view.gestureRecognizers?.contains(gestureRecognizer) ?? false && touch.view is UIControl)
     }
 }
