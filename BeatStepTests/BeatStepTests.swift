@@ -3,7 +3,9 @@
 // Copyright © 2018 Nick Teissler. All rights reserved.
 
 import XCTest
+import SnapshotTesting
 @testable import BeatStep
+
 
 class BeatStepTests: XCTestCase {
 
